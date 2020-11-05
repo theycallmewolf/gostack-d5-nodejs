@@ -52,12 +52,6 @@ class TransactionsRepository {
     type,
   }: CreateTransactionDTO): TransactionModel {
     const newTransaction = new TransactionModel({ title, value, type });
-
-    // validar o saldo
-    const { total } = this.getBalance();
-    if (type === 'outcome' && value >= total) {
-      throw Error("you don't have enough money");
-    }
     this.transactions.push(newTransaction);
     return newTransaction;
   }
