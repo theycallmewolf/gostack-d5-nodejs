@@ -20,7 +20,7 @@ class TransactionsRepository {
   }
 
   public all(): TransactionModel[] {
-    // TODO
+    return this.transactions;
   }
 
   public getBalance(): Balance {
