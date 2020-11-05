@@ -1,5 +1,4 @@
 import TransactionsRepository from '../repositories/TransactionsRepository';
-import TransactionModel from '../models/Transaction.model';
 
 interface TransactionDTO {
   title: string;
