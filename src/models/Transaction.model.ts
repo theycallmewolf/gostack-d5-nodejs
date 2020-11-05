@@ -1,6 +1,6 @@
 import { v4 as uuid } from 'uuid';
 
-class Transaction {
+class TransactionModel {
   id: string;
 
   title: string;
@@ -9,7 +9,7 @@ class Transaction {
 
   type: 'income' | 'outcome';
 
-  constructor({ title, value, type }: Omit<Transaction, 'id'>) {
+  constructor({ title, value, type }: Omit<TransactionModel, 'id'>) {
     this.id = uuid();
     this.title = title;
     this.value = value;
@@ -17,4 +17,4 @@ class Transaction {
   }
 }
 
-export default Transaction;
+export default TransactionModel;
